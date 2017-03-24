@@ -1,6 +1,6 @@
 body {
   background: #a9b2bd;
-  font-family: 'Roboto Slab', Arial, sans-serif;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   color: #12202f;
 }
 
@@ -9,13 +9,13 @@ body {
   max-width: 800px;
   margin: 0 auto;
   padding-left: 24px;
-  text-align: center;
 }
 
 h1 {
   font: 800 64px/64px 'Open Sans', Helvetica, Arial, san-serif;
   text-shadow: 2px 2px 2px rgba(0,0,0,0.1);
   text-transform: uppercase;
+  text-align: center;
 }
 
 .info {
@@ -26,9 +26,30 @@ h1 {
 }
 
 #alerts {
-    height: 40px;
-    line-height: 40px;
-    flex: 1;
+  background: #9aa5b3;
+  margin-left: 20px;
+  width: 600px;
+  border-radius: 10px;
+  height: 58px;
+  line-height: 40px;
+  display: flex;
+}
+
+.alert-div {
+  flex: 1;
+}
+
+.alerts-label {
+  text-transform: uppercase;
+  position: relative;
+  left: 10px;
+  top: -4px;
+  font-size: small;
+}
+
+.alerts-note {
+  position: relative;
+  top: 14px;
 }
 
 #pass-btn {
@@ -36,7 +57,7 @@ h1 {
   background-color: #597692;
   border: none;
   border-radius: 10px;
-  box-shadow: 0 10px #25384c;
+  box-shadow: 0 8px #25384c;
   width: 100px;
   height: 50px;
   text-transform: uppercase;
@@ -50,8 +71,8 @@ h1 {
 }
 #pass-btn:active {
   background-color: #3b5c7b;
-  box-shadow: 0 5px #27496d;
-  transform: translateY(5px);
+  box-shadow: 0 4px #25384c;
+  transform: translateY(4px);
   border: none;
 }
 

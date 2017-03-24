@@ -45,14 +45,31 @@ var BoardView = React.createClass({
 
 var AlertView = React.createClass({
     render: function() {
-        var text = "";
+        let text = "";
         if (this.props.board.in_atari)
             text = "ATARI!";
         else if (this.props.board.attempted_suicide)
             text = "SUICIDE!";
 
         return (
-            <div id="alerts">{text}</div>
+            <div id="alerts">
+              <div className="alert-div">
+                <span className="alerts-label">Notes</span>
+                <span className="alerts-note">Atari!</span>
+              </div>
+              <div className="alert-div">
+                <span className="alerts-label">Next Move</span>
+                <span className="alerts-note">Black</span>
+              </div>
+              <div className="alert-div">
+                <span className="alerts-label">Black</span>
+                <span className="alerts-note">4</span>
+              </div>
+              <div className="alert-div">
+                <span className="alerts-label">White</span>
+                <span className="alerts-note">9</span>
+              </div>
+            </div>
         );
     }
 });

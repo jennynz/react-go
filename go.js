@@ -17,7 +17,7 @@ var BoardIntersection = React.createClass({
             classes += this.props.color == Board.BLACK ? " black" : " white";
 
         return (
-            <div onClick={this.handleClick} 
+            <div onClick={this.handleClick}
                  className={classes} style={style}></div>
         );
     }
@@ -63,7 +63,7 @@ var PassView = React.createClass({
     },
     render: function() {
         return (
-            <input id="pass-btn" type="button" value="Pass" 
+            <input id="pass-btn" type="button" value="Pass"
                 onClick={this.handleClick} />
         );
     }
@@ -80,11 +80,14 @@ var ContainerView = React.createClass({
     },
     render: function() {
         return (
-            <div>
-                <AlertView board={this.state.board} />
+            <div className="game">
+              <h1>Play some Go</h1>
+              <div className="info">
                 <PassView board={this.state.board} />
-                <BoardView board={this.state.board} 
-                    onPlay={this.onBoardUpdate.bind(this)} />
+                <AlertView board={this.state.board} />
+              </div>
+              <BoardView board={this.state.board}
+                  onPlay={this.onBoardUpdate.bind(this)} />
             </div>
         )
     }

@@ -1,13 +1,64 @@
+body {
+  background: #a9b2bd;
+  font-family: 'Roboto Slab', Arial, sans-serif;
+  color: #12202f;
+}
+
+.game {
+  width: 80%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-left: 24px;
+  text-align: center;
+}
+
+h1 {
+  font: 800 64px/64px 'Open Sans', Helvetica, Arial, san-serif;
+  text-shadow: 2px 2px 2px rgba(0,0,0,0.1);
+  text-transform: uppercase;
+}
+
+.info {
+  width: 100%;
+  height: 60px;
+  padding-left: 20px;
+  display: flex;
+}
+
 #alerts {
     height: 40px;
     line-height: 40px;
+    flex: 1;
 }
 
 #pass-btn {
+  color: #fff;
+  background-color: #597692;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 10px #25384c;
+  width: 100px;
+  height: 50px;
+  text-transform: uppercase;
+  font-size: larger;
+  font-family: 'Open Sans', Arial, sans-serif;
+  letter-spacing: 0.1em;
+}
+#pass-btn:hover{
+  background-color: #496988;
+  border: none;
+}
+#pass-btn:active {
+  background-color: #3b5c7b;
+  box-shadow: 0 5px #27496d;
+  transform: translateY(5px);
+  border: none;
 }
 
 #board {
     position: relative;
+    -webkit-box-shadow: inset -1px -1px 0 19px #a9b2bd;
+    box-shadow: inset -1px -1px 0 19px #a9b2bd;
 }
 
 .intersection {
@@ -19,7 +70,7 @@
 }
 
 .intersection:before {
-    border-top: 2px #000 solid;
+    border-top: 2px #12202f solid;
     width: 40px;
     display: block;
     content: "";
@@ -29,7 +80,7 @@
 }
 
 .intersection:after {
-    border-left: 2px #000 solid;
+    border-left: 2px #12202f solid;
     height: 40px;
     display: block;
     content: "";
@@ -39,14 +90,18 @@
     z-index: -1;
 }
 
-.intersection.black, .intersection.white {
-    border: 1px solid #000;
-}
-
 .intersection.black {
-    background-color: #444;
+    background-color: #101015;
+    box-shadow:
+      rgba(255, 255, 255, 0.2) 0px 3.33333px 6.66667px 0px inset,
+      rgba(0, 0, 0, 0.156863) 0px 1.66667px 3.33333px 0px,
+      rgba(0, 0, 0, 0.117647) 0px 1.66667px 5px 0px;
 }
 
 .intersection.white {
-    background-color: #eee;
+    background-color: #eeeef0;
+    box-shadow:
+      rgba(0, 0, 0, 0.156863) 0px -3.33333px 6.66667px 0px inset,
+      rgba(0, 0, 0, 0.156863) 0px 1.66667px 3.33333px 0px,
+      rgba(0, 0, 0, 0.117647) 0px 1.66667px 5px 0px;
 }
